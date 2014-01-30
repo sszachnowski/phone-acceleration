@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="screen" id="output">
+        Przyśpieszenie wynosi: 
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var output = document.getElementById('output');
+            // event listener for window object
+            window.addEventListener('devicemotion', function (event) {
+
+                if(event.accelerationIncludingGravity !== null) {
+                    output.innerHTML = "Przyśpieszenie wynosi" + event.accelerationIncludingGravity.x;
+                } 
+            }, false);
+        }, false);
+    </script>
+</body>
+</html>
