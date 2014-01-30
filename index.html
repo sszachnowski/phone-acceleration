@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="screen" id="output">
-        Przyśpieszenie wynosi: 
+        Acceleration is: 
     </div>
     <script>
         window.addEventListener('load', function () {
@@ -16,7 +16,7 @@
             window.addEventListener('devicemotion', function (event) {
 
                 if(event.acceleration !== null) {
-                    output.innerHTML = "Przyśpieszenie wynosi" + event.acceleration.x;
+                    output.innerHTML = "Acceleration is:" + event.acceleration.x;
                 } 
             }, false);
         }, false);
